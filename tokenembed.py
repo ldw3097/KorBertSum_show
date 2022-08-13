@@ -35,14 +35,12 @@ def main():
     train_f = './json_data/korean.train.1.json'
 
     # match word/morph with indices
+    # 0인 토큰 왜 뜨는지 잘 모르겠음
     with open(train_f, 'r') as file:
         data = json.load(file, strict=False)
         for i in range(len(data)):
             for j in range(len(data[i]['src'])):
                 morph_to_idx(data[i]['src'][j])
-        # for idx, _ in enumerate(data):
-        #     for item in data[idx]['src']:
-        #         morph_to_idx(item)
 
 if __name__ == '__main__':
     main()
