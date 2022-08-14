@@ -35,7 +35,7 @@ def main():
 
     # match word/morph with indices
     # UNK 토큰은 인덱스 0으로 처리
-    list_dict = list()
+    token_dict = list()
     with open(train_f, 'r') as file:
         data = json.load(file, strict=False)
         for i in range(len(data)):
@@ -44,7 +44,7 @@ def main():
                 temp_src = list()
                 temp_src.append(morph_to_idx(data[i]['src'][j]))
                 mydict['src'] = temp_src
-            list_dict.append(mydict)
+            token_dict.append(mydict)
 
 if __name__ == '__main__':
     main()
