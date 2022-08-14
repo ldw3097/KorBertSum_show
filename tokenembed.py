@@ -39,10 +39,12 @@ def main():
     with open(train_f, 'r') as file:
         data = json.load(file, strict=False)
         for i in range(len(data)):
+            mydict = {}
             for j in range(len(data[i]['src'])):
-                mydict = {}
-                mydict['src'] = morph_to_idx(data[i]['src'][j])
-                list_dict.append(mydict)
+                temp_src = list()
+                temp_src.append(morph_to_idx(data[i]['src'][j]))
+                mydict['src'] = temp_src
+            list_dict.append(mydict)
 
 if __name__ == '__main__':
     main()
