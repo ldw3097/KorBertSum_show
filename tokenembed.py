@@ -41,8 +41,7 @@ def main():
         for i in range(len(data)):
             mydict = {}
             for j in range(len(data[i]['src'])):
-                temp_src = list()
-                temp_src.append(morph_to_idx(data[i]['src'][j]))
+                temp_src = morph_to_idx(data[i]['src'][j])
                 mydict['src'] = temp_src
             token_dict.append(mydict)
 
