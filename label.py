@@ -1,28 +1,26 @@
 import json
 
-def label():
-    # file_path 변경 필요
-    file_path = './json_data/korean.train.1.json'
+def label(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         data = json.load(file, strict=False)
         
-        label_dict = list()
-        for sents in data:
-            mydict = {}
-            temp_list = [0 for _ in sents['src']]
-            for idx, sent in enumerate(sents['src']):
-                for i, tgt in enumerate(sents['tgt']):
+        label_list = list()
+        for article in data:
+            temp_list = [0 for _ in article['src']]
+            for idx, sent in enumerate(article['src']):
+                for i, tgt in enumerate(article['tgt']):
                     if (sent == tgt):
                         temp_list[idx] = 1
-                        sents['tgt'][i].pop()
+                        article['tgt'][i].pop()
                         break
-            mydict['label'] = temp_list
-            label_dict.append(mydict)
+            label_list.append(temp_list)
 
-    return label_dict
+    return label_list
 
 def main():
-    label_data = label()
+    # check file_path
+    file_path = './json_data/korean.train.1.json'
+    label_data = label(file_path)
 
 if __name__ == "__main__":
     main()
