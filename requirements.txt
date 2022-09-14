@@ -1,0 +1,5 @@
+docu==0.24.0
+doqu==0.28.2
+validators==0.20.0
+utils==1.0.1
+python-utils==3.3.3
