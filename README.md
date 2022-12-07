@@ -5,4 +5,3 @@ embedding 과정까지만 구현돼있음
 3. 형태소분석기: https://aiopen.etri.re.kr/guide_wiseNLU.php#group02, https://github.com/bab2min/kiwipiepy    
 4. 데이터셋: https://corpus.korean.go.kr 국립국어원 신문 말뭉치(2021)
 5. article2json.py 요약문 문장이 제목인 경우 고려하지 않았음  
-6. ./json_data/korean.train.1.json 에서 뉴스 데이터 셔플 어떻게 하지?  
