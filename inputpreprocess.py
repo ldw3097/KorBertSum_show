@@ -1,6 +1,5 @@
 import json
 
-# file_path 변경 필요
 file_path = './json_data/korean.train.1.json'
 with open(file_path, 'r', encoding='utf-8') as file:
     data = json.load(file, strict=False)
@@ -25,9 +24,7 @@ with open(file_path, 'r', encoding='utf-8') as file:
         mydict['tgt'] = temp_tgt
         list_dic.append(mydict)
 
-    # create json file
-    file_path = "./json_data/korean.train.1.json"
+    renew_file = "./json_data/korean.train.1.json"
 
-    with open(file_path, 'w', encoding='utf-8') as f:
+    with open(renew_file, 'w', encoding='utf-8') as f:
         json.dump(list_dic, f, ensure_ascii=False)
-    
