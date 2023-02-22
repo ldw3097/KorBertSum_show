@@ -1,13 +1,36 @@
-# 레포 수정중입니다. 사용하지 않으시길 바랍니다!!!  
+# 문서 요약 텍스트를 활용한 KorBertSum input data 만들기
 
-## Before you start this program
+## 전제 조건
 
-41개의 데이터셋으로 미니 학습
->> 용량이 너무 커서 개인 노트북에서 다룰 수 없어서 데이터셋의 크기를 줄여야 했음
->> `article2json.py`에서 extractive sentence가 제목에 있는 경우를 고려하지 못해 41개의 데이터셋밖에 없음
+    pip3 install logger
+    pip3 install kiwipiepy
 
-ETRI bert model을 다운로드 받아야 하고, access key가 있어야 합니다.
+ETRI 홈페이지에서 access key를 발급받은 뒤 BERT model을 다운로드 받아야 합니다.
+(사용협약서 상 모델을 공개하지 않는 점 양해 부탁드립니다.)
 
+## 사용 방법
+
+### 문서 요약 텍스트에서 기사 전체 문단과 extractive sentence를 json 파일로 생성한다.
+
+    python article2json.py
+
+### 임베딩을 진행한다.
+
+    python embedding.py
+
+### list를 tensor 파일로 변환한다.
+
+    python list2tensor.py
+
+## 주의사항
+
+get_src 함수에 Kiwi tokenizer와 ETRI tokenizer로 형태소 분석하는 기능을 구현했습니다.
+현재 원인 모를 이유로 ETRI 형태소 분석이 되지 않아 Kiwi tokenizer로 재배포했습니다.
+Kiwi와 ETRI 형태소 분석기의 태그셋이 서로 다른 부분이 있는데, 이 점이 성능에 영향을 미칠 수도 있는 점 유의 바랍니다.
+list2tensor.py에서 마무리로 .pt 확장자로 변환해주는 로직을 추가해줘야 합니다.
+
+# 출처
 BertSum 논문: https://arxiv.org/pdf/1903.10318.pdf  
 참고한 블로그: https://velog.io/@raqoon886/KorBertSum-SummaryBot    
-형태소분석기: https://aiopen.etri.re.kr/guide_wiseNLU.php#group02, https://github.com/bab2min/kiwipiepy 
+ETRI 형태소분석기: https://aiopen.etri.re.kr/guide_wiseNLU.php#group02
+Kiwi 형태소분석기: https://github.com/bab2min/kiwipiepy 
