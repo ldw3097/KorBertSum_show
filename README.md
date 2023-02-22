@@ -1,6 +1,6 @@
 # 문서 요약 텍스트를 활용한 KorBertSum input data 생성하기
 
-[문서 요약 텍스트](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=97, "문서요약텍스트")를 활용해서 KorBertSum input data를 생성하는 레포지토리입니다.
+[문서 요약 텍스트](https://aihub.or.kr/, "문서요약텍스트")를 활용해서 KorBertSum input data를 생성하는 레포지토리입니다.
 
 이 문서의 원저작권은 [BertSum](https://github.com/nlpyang/BertSum, "BertSum")에 있습니다.
 
