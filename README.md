@@ -1,4 +1,10 @@
-# 문서 요약 텍스트를 활용한 KorBertSum input data 만들기
+# 문서 요약 텍스트를 활용한 KorBertSum input data 생성하기
+
+문서 요약 텍스트를 활용해서 KorBertSum input data를 생성하는 레포지토리입니다.
+
+[BertSum](https://arxiv.org/pdf/1903.10318.pdf, "BertSum") 논문에 원저작권이 있습니다.
+
+[KorBertSum](https://velog.io/@raqoon886/KorBertSum-SummaryBot, "KorBertSum blog")를 전반적으로 참고했습니다.
 
 ## 전제 조건
 
@@ -6,6 +12,7 @@
     pip3 install kiwipiepy
 
 ETRI 홈페이지에서 access key를 발급받은 뒤 BERT model을 다운로드 받아야 합니다.
+
 (사용협약서 상 모델을 공개하지 않는 점 양해 부탁드립니다.)
 
 ## 사용 방법
@@ -25,9 +32,14 @@ ETRI 홈페이지에서 access key를 발급받은 뒤 BERT model을 다운로�
 ## 주의사항
 
 get_src 함수에 Kiwi tokenizer와 ETRI tokenizer로 형태소 분석하는 기능을 구현했습니다.
+
 현재 원인 모를 이유로 ETRI 형태소 분석이 되지 않아 Kiwi tokenizer로 재배포했습니다.
+
 Kiwi와 ETRI 형태소 분석기의 태그셋이 서로 다른 부분이 있는데, 이 점이 성능에 영향을 미칠 수도 있는 점 유의 바랍니다.
+
 list2tensor.py에서 마무리로 .pt 확장자로 변환해주는 로직을 추가해줘야 합니다.
+
+학습은 구글 Colab pro 환경에서 진행했습니다.
 
 # 출처
 BertSum 논문: https://arxiv.org/pdf/1903.10318.pdf  
