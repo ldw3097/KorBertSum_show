@@ -1,12 +1,12 @@
 # 문서 요약 텍스트를 활용한 KorBertSum input data 생성하기
 
-문서 요약 텍스트(https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=97) 를 활용해서 KorBertSum input data를 생성하는 레포지토리입니다.
+[문서 요약 텍스트](https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=realm&dataSetSn=97)를 활용해서 KorBertSum input data를 생성하는 레포지토리입니다.
 
-이 문서의 원저작권은 BertSum(https://github.com/nlpyang/BertSum) 에 있습니다.
+이 문서의 원저작권은 [BertSum](https://github.com/nlpyang/BertSum) 에 있습니다.
 
-KorBertSum 블로그(https://velog.io/@raqoon886/KorBertSum-SummaryBot) 를 전반적으로 참고했습니다.
+[KorBertSum](https://velog.io/@raqoon886/KorBertSum-SummaryBot)을 전반적으로 참고했습니다.
 
-[BertSum](https://arxiv.org/pdf/1903.10318.pdf, "BertSum") 에서 embedding 방식에 관해 도움을 받을 수 있습니다.
+[BertSum](https://arxiv.org/pdf/1903.10318.pdf) 에서 embedding 방식에 관해 도움을 받을 수 있습니다.
 
 ## 전제 조건
 
